@@ -29,6 +29,10 @@ app.post('/new', function(req, res, next) {
   res.redirect('/');
 });
 
+app.get('/new', function(req, res, next) {
+  res.render('messageForm', { title: 'New Message' });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

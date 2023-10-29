@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <a href="/"><button class="return-button">Take me Back</button></a>
+    <h1 class="send-message-header">Send a Message:</h1>
+    <form method="POST" action="/new" class="send-message-form">
+        <label for="user-name">Your Name:</label>
+        <input type="text" name="messageUser" required id="user-name">
+    
+        <label for="user-message">Your Message:</label>
+        <input type="text" name="messageMessage" required id="user-message">
+    
+        <button id="submit-button">Send</button>
+    </form>
+</body>
+</html>
