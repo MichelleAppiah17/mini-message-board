@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1 class="main-header">
+        <%= title %>
+    </h1>
+    <a href="/new"><button class="add-message-button">Add Message</button></a>
+    <p class="welcome-text">Welcome to the <%= title %>, here are some latest messages:</p>
+    <ul class="message-list">
+        <% messages.map(function(message) { %>
+            <div class="message-container">
+                <div class="user-heading-text">
+                    <p class="message-user"><strong>
+                            <%= message.user %>
+                        </strong></p>
+                    <p class="message-text"><em>(<%= message.message %>)</em></p>
+                </div>
+                <p class="message-time">
+                    <%= message.added %>
+                </p>
+            </div>
+            <% }); %>
+    </ul>
+</body>
+</html>
