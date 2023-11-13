@@ -4,6 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .main-header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+        .add-message-button{
+            background-color: rgb(149, 169, 221);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2% 20%;
+            cursor: pointer;
+            position: sticky;
+            top: 7%;
+        }
+        .message-time {
+            color: #888;
+        }
+        .welcome-text {
+            text-align: center;
+            font-weight: bolder;
+            margin: 1% 20%;
+        }
+        .message-list {
+            list-style: none;
+            padding: 0 2%;
+        }
+        .message-container {
+            background: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        }
+        .user-heading-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1 class="main-header">
@@ -18,10 +72,10 @@
                     <p class="message-user"><strong>
                             <%= message.user %>
                         </strong></p>
-                    <p class="message-text"><em>(<%= message.message %>)</em></p>
+                    <p class="message-time"><em>(<%= message.added %>)</em></p>
                 </div>
-                <p class="message-time">
-                    <%= message.added %>
+                <p class="message-text">
+                    <%= message.message %>
                 </p>
             </div>
             <% }); %>
